@@ -1,0 +1,226 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FAF6F0;
+}
+
+* {
+    font-family: "fredoka", sans-serif;
+    font-weight: 600;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+}
+
+.main-header {
+    background-color: #FAF6F0;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #262626;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #ff7a45;
+    border-bottom: 2px solid #ff7a45;
+    padding-bottom: 4px;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 100px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: carruselFondo 12s infinite;
+    transition: background-image 1s ease-in-out;
+}
+
+.slogan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(38, 70, 83, 0.5);
+    z-index: 1;
+}
+
+.slogan h2, 
+.slogan a {
+    position: relative;
+    z-index: 2;
+}
+
+.slogan h2 {
+    color: #FAF6F0;
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.slogan a {
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #E5A96E;
+    color: #3E3431;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+.slogan a:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 15px rgba(62, 52, 49, 0.3);
+}
+
+@keyframes carruselFondo {
+    0%, 20% {
+        background-image: url('/assets/foto1.jpg');
+    }
+    25%, 45% {
+        background-image: url('/assets/foto2.jpg');
+    }
+    50%, 70% {
+        background-image: url('/assets/foto3.jpg');
+    }
+    75%, 95% {
+        background-image: url('/assets/foto4.jpg');
+    }
+    100% {
+        background-image: url('/assets/foto1.jpg');
+    }
+}
+
+.caja-historia {
+    background-color: #FAF6F0; 
+    max-width: 90%;            
+    box-sizing: border-box;
+    margin: 40px auto;         
+    padding: 40px;
+    border: 2px solid #E5A96E; 
+    border-radius: 20px;       
+    box-shadow: 0 4px 15px rgba(62, 52, 49, 0.05);
+}
+
+.caja-historia h2 {
+    color: #B76E59;            
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.texto-nosotros {
+    color: #3E3431;            
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.contenedor-mision-vision {
+    display: flex;
+    max-width: 90%;
+    box-sizing: border-box;
+    margin: 0 auto 40px auto;  
+    gap: 30px;                 
+    justify-content: space-between;
+}
+
+.caja-info {
+    flex: 1;                   
+    background-color: #FAF6F0; 
+    padding: 35px;
+    border: 2px solid #E5A96E; 
+    border-radius: 20px;       
+    box-shadow: 0 4px 15px rgba(62, 52, 49, 0.05);
+}
+
+.caja-info h3 {
+    color: #4A6B5D;            
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.caja-info p {
+    color: #3E3431;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+footer {
+    padding: 20px 30px;
+    background-color: #FAF6F0;
+    border-top: 1px solid rgba(229, 169, 110, 0.3);
+}
+
+footer h5 {
+    margin: 0;
+    color: #7A6F6C;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .contenedor-mision-vision {
+        flex-direction: column;
+        gap: 20px;             
+        max-width: 95%;
+    }
+    
+    .caja-historia {
+        max-width: 95%;
+        padding: 25px;         
+    }
+
+    .caja-info {
+        padding: 25px;
+    }
+    
+    .slogan {
+        padding: 60px 20px;
+    }
+
+    .slogan h2 {
+        font-size: 1.8rem;
+    }
+}
