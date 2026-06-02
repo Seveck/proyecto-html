@@ -11,6 +11,7 @@ body {
     font-weight: 600;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .logo-img {
@@ -27,6 +28,7 @@ body {
 
 .logo-text {
     font-size: 1.2rem;
+    color: #262626;
 }
 
 .main-header {
@@ -40,7 +42,6 @@ body {
     top: 0;
     z-index: 1000;
     width: 100%; 
-    box-sizing: border-box; 
 }
 
 .nav-links {
@@ -54,14 +55,14 @@ body {
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
 }
 
-.nav-links a:hover, 
-.nav-links a.active {
+.nav-links a:hover, .nav-links a.active {
     color: #ff7a45;
     border-bottom: 2px solid #ff7a45;
-    padding-bottom: 4px;
 }
 
 .slogan {
@@ -73,7 +74,6 @@ body {
     padding: 130px 100px;
     min-height: 350px;
     position: relative;
-    box-sizing: border-box;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -102,6 +102,7 @@ body {
     color: #FAF6F0;
     font-size: 2.8rem;
     margin: 0;
+    text-align: center;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -120,6 +121,37 @@ body {
 .slogan a:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(62, 52, 49, 0.3);
+}
+
+.tarjeta-info {
+    background-color: #FAF6F0;
+    border: 2px solid #E5A96E;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(62, 52, 49, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+.tarjeta-info h3 {
+    color: #4A6B5D;
+    font-size: 1.8rem;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(229, 169, 110, 0.3);
+    padding-bottom: 12px;
+}
+
+.tarjeta-info p {
+    color: #3E3431;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    text-align: justify;
 }
 
 @keyframes carruselFondo {
@@ -160,62 +192,6 @@ body {
     }
 }
 
-.caja-historia {
-    background-color: #FAF6F0; 
-    max-width: 90%;            
-    box-sizing: border-box;
-    margin: 40px auto;         
-    padding: 40px;
-    border: 2px solid #E5A96E; 
-    border-radius: 20px;       
-    box-shadow: 0 4px 15px rgba(62, 52, 49, 0.05);
-}
-
-.caja-historia h2 {
-    color: #B76E59;            
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.texto-nosotros {
-    color: #3E3431;            
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: justify;
-}
-
-.contenedor-mision-vision {
-    display: flex;
-    max-width: 90%;
-    box-sizing: border-box;
-    margin: 0 auto 40px auto;  
-    gap: 30px;                 
-    justify-content: space-between;
-}
-
-.caja-info {
-    flex: 1;                   
-    background-color: #FAF6F0; 
-    padding: 35px;
-    border: 2px solid #E5A96E; 
-    border-radius: 20px;       
-    box-shadow: 0 4px 15px rgba(62, 52, 49, 0.05);
-}
-
-.caja-info h3 {
-    color: #4A6B5D;            
-    font-size: 1.6rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.caja-info p {
-    color: #3E3431;
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
 footer {
     padding: 20px 30px;
     background-color: #FAF6F0;
@@ -226,32 +202,6 @@ footer h5 {
     margin: 0;
     color: #7A6F6C;
     font-weight: 500;
-}
-
-@media (max-width: 768px) {
-    .contenedor-mision-vision {
-        flex-direction: column;
-        gap: 20px;             
-        max-width: 95%;
-    }
-    
-    .caja-historia {
-        max-width: 95%;
-        padding: 25px;         
-    }
-
-    .caja-info {
-        padding: 25px;
-    }
-    
-    .slogan {
-        padding: 80px 20px;
-        min-height: 280px;
-    }
-
-    .slogan h2 {
-        font-size: 2rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -271,5 +221,20 @@ footer h5 {
     .nav-links a {
         font-size: 0.95rem;
         padding-bottom: 2px;
+    }
+
+    .slogan {
+        padding: 80px 20px;
+        min-height: 280px;
+    }
+
+    .slogan h2 {
+        font-size: 2rem;
+    }
+
+    .tarjeta-info {
+        max-width: 95%;
+        margin: 30px auto;
+        padding: 25px 20px;
     }
 }

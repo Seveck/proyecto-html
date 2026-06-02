@@ -24,8 +24,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -49,7 +49,7 @@ body {
 .nav-links {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -57,14 +57,14 @@ body {
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
 }
 
-.nav-links a:hover, 
-.nav-links a.active {
+.nav-links a:hover, .nav-links a.active {
     color: #ff7a45;
     border-bottom: 2px solid #ff7a45;
-    padding-bottom: 4px;
 }
 
 .seccion-adopcion {
@@ -125,7 +125,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     flex-grow: 1;
     gap: 15px;
@@ -155,33 +154,28 @@ body {
     margin: 0;
 }
 
-.estado {
-    font-size: 1rem;
+.btn-perfil {
+    text-decoration: none;
+    text-align: center;
+    width: 80%;
+    padding: 10px 0;
+    background-color: #E5A96E;
     color: #3E3431;
-    margin-top: 5px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transform: translateY(0);
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    margin-top: auto; 
 }
 
-.disponible {
-    color: #2b7a4a;
-    background-color: #e8f5e9;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    display: inline-block;
-    margin-left: 5px;
-}
-
-.nodisponible {
-    color: #b71c1c;
-    background-color: #ffebee;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    display: inline-block;
-    margin-left: 5px;
+.btn-perfil:hover {
+    background-color: #B76E59;
+    color: #FAF6F0;
+    transform: translateY(-2px);
 }
 
 footer {
+    display: flexbox;
     padding: 20px 30px;
     background-color: #FAF6F0;
     border-top: 1px solid rgba(229, 169, 110, 0.3);
@@ -196,17 +190,6 @@ footer h5 {
 @media (max-width: 1024px) {
     .contenedor-catalogo {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .seccion-adopcion {
-        max-width: 95%;
-    }
-
-    .contenedor-catalogo {
-        grid-template-columns: 1fr;
-        gap: 20px;
     }
 }
 
@@ -227,6 +210,15 @@ footer h5 {
     .nav-links a {
         font-size: 0.95rem;
         padding-bottom: 2px;
+    }
+
+    .seccion-adopcion {
+        max-width: 95%;
+    }
+
+    .contenedor-catalogo {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
